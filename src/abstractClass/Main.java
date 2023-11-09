@@ -7,5 +7,15 @@ public class Main {
         Animal cat = new Cat("Tom", 3);
         dog.makeSound();
         cat.makeSound();
+
+
+        Animal panda = new Animal("Panda",6) {
+            @Override
+            public void makeSound() {
+                System.out.println("puf puf ");
+
+            }
+        };
+        panda.makeSound();
     }
 }
