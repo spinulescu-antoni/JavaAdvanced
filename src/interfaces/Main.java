@@ -17,7 +17,7 @@ public class Main {
         StreamingPlayer steamingPlayer = new StreamingPlayer() {
             @Override
             public void playMovie(String movie) {
-                System.out.println("Playing movie" + movie + "on my awsome streaming player. ");
+                System.out.println("Playing movie " + movie + " on my awsome streaming player. ");
             }
 
             @Override
@@ -38,6 +38,17 @@ public class Main {
         System.out.println("My awesome player subscription is " + steamingPlayer.getSubscriptionPrice());
         steamingPlayer.playMovie("Titanic");
         steamingPlayer.stopMovie();
+        System.out.println("------------------");
+        processStreamingPlayer(netflix, "batman");
+        processStreamingPlayer(prime, "Spider-man");
+        processStreamingPlayer(steamingPlayer,"Titanic");
 
+    }
+    static void processStreamingPlayer(StreamingPlayer streamingPlayer,String movie){
+        streamingPlayer.playMovie(movie);
+        streamingPlayer.stopMovie();
+        System.out.println("Subscription price is: " + streamingPlayer.getSubscriptionPrice());
+
+        System.out.println("-------------");
     }
 }

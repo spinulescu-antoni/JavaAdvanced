@@ -3,7 +3,7 @@ package interfaces;
 public class PrimeStreamingPlayer implements StreamingPlayer{
     @Override
     public void playMovie(String movie) {
-        System.out.println("Playing movie" + movie + " on Prime.");
+        System.out.println("Playing movie " + movie + " on Prime.");
     }
 
     @Override
